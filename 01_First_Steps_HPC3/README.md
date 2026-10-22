@@ -28,18 +28,22 @@ You need to be in the campus network (or VPN) and have your public SSH key regis
 ssh <kennung>@hpc3.hs-flensburg.de
 ```
 
-## 2. Copy the code to the cluster
+## 2. Get the code onto the cluster
 
-From **your own computer** (not from the cluster), in the directory that contains `code-examples/`:
+The login node has internet access, so simply clone the repository **in the cluster shell**:
 
 ```bash
-rsync -avz --exclude outputs --exclude data code-examples/ <kennung>@hpc3.hs-flensburg.de:~/code-examples/
+git clone https://github.com/VisuComp/GenAI.git
+cd GenAI && git pull     # later: fetch updates
 ```
+
+(If you have modified the code on your own computer and want to try it on the cluster without committing, copy it from your
+computer instead: `rsync -avz --exclude outputs --exclude data ./ <kennung>@hpc3.hs-flensburg.de:~/GenAI/`.)
 
 ## 3. One-time setup (on the login node)
 
 ```bash
-cd ~/code-examples/01_First_Steps_HPC3
+cd ~/GenAI/01_First_Steps_HPC3
 bash setup_env.sh        # creates ~/venvs/genai, installs PyTorch (several GB!), downloads MNIST
 mkdir -p logs            # SLURM does NOT create the log directory; without it the job fails silently
 ```
@@ -83,7 +87,7 @@ Note the two numbers in the GPU line: `total` is the **whole physical card**, `f
 From **your own computer**:
 
 ```bash
-rsync -avz <kennung>@hpc3.hs-flensburg.de:~/code-examples/01_First_Steps_HPC3/outputs/ ./outputs/
+rsync -avz <kennung>@hpc3.hs-flensburg.de:~/GenAI/01_First_Steps_HPC3/outputs/ ./outputs/
 ```
 
 ## Things to try
