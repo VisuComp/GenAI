@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1100" height="545" viewBox="0 0 1100 545">
+  <defs>
+    <clipPath id="clip-path-1">
+      <path d="M155.92 109.4 L167.12 109.4 L167.12 120.6 L155.92 120.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path d="M339.92 109.4 L351.12 109.4 L351.12 120.6 L339.92 120.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path d="M473.92 109.4 L485.12 109.4 L485.12 120.6 L473.92 120.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path d="M672.92 109.4 L684.12 109.4 L684.12 120.6 L672.92 120.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path d="M871.92 109.4 L883.12 109.4 L883.12 120.6 L871.92 120.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <path d="M161.92 434.4 L173.12 434.4 L173.12 445.6 L161.92 445.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <path d="M370.92 434.4 L382.12 434.4 L382.12 445.6 L370.92 445.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-8">
+      <path d="M579.92 434.4 L591.12 434.4 L591.12 445.6 L579.92 445.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <path d="M753.92 434.4 L765.12 434.4 L765.12 445.6 L753.92 445.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-10">
+      <path d="M887.92 434.4 L899.12 434.4 L899.12 445.6 L887.92 445.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-11">
+      <path d="M56.6 400.92 L56.6 412.12 L45.4 412.12 L45.4 400.92 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-12">
+      <path d="M133.6 400.92 L133.6 412.12 L122.4 412.12 L122.4 400.92 Z"/>
+    </clipPath>
+  </defs>
+  <title>architecture.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M20.207 30 L1051.078 30 C1056.714 30 1061.284 34.477 1061.284 40 L1061.284 190 C1061.284 195.523 1056.714 200 1051.078 200 L20.207 200 C14.57 200 10 195.523 10 190 L10 40 C10 34.477 14.57 30 20.207 30 Z" fill="#f6f6f6" stroke="#bbbbbb" stroke-dasharray="4 3"/>
+    <text transform="matrix(1 0 0 1 22 52)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="15" font-weight="bold" fill="#333333"><tspan x="0" y="0">Generator G</tspan></text>
+    <path d="M20.207 290 L1051.078 290 C1056.714 290 1061.284 294.477 1061.284 300 L1061.284 495 C1061.284 500.523 1056.714 505 1051.078 505 L20.207 505 C14.57 505 10 500.523 10 495 L10 300 C10 294.477 14.57 290 20.207 290 Z" fill="#eeeeee" stroke="#bbbbbb" stroke-dasharray="4 3"/>
+    <text transform="matrix(1 0 0 1 1028 312)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="15" font-weight="bold" fill="#333333" text-anchor="end"><tspan x="0" y="0">Discriminator D</tspan></text>
+    <path d="M40 89 L128 89 C131.314 89 134 91.686 134 95 L134 135 C134 138.314 131.314 141 128 141 L40 141 C36.686 141 34 138.314 34 135 L34 95 C34 91.686 36.686 89 40 89 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 84 111)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">z</tspan></text>
+    <text transform="matrix(1 0 0 1 84 128)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">noise N(0, I)</tspan></text>
+    <text transform="matrix(1 0 0 1 78.604 75.23)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">64</tspan></text>
+    <path d="M174 89 L312 89 C315.314 89 318 91.686 318 95 L318 135 C318 138.314 315.314 141 312 141 L174 141 C170.686 141 168 138.314 168 135 L168 95 C168 91.686 170.686 89 174 89 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 243 111)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 64 → 6272</tspan></text>
+    <text transform="matrix(1 0 0 1 243 128)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">BatchNorm · ReLU</tspan></text>
+    <path d="M358 97.5 L446 97.5 C449.314 97.5 452 100.186 452 103.5 L452 126.5 C452 129.814 449.314 132.5 446 132.5 L358 132.5 C354.686 132.5 352 129.814 352 126.5 L352 103.5 C352 100.186 354.686 97.5 358 97.5 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 402 119.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Reshape</tspan></text>
+    <text transform="matrix(1 0 0 1 402 69.48)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">128 × 7 × 7</tspan></text>
+    <path d="M492 80.5 L645 80.5 C648.314 80.5 651 83.186 651 86.5 L651 143.5 C651 146.814 648.314 149.5 645 149.5 L492 149.5 C488.686 149.5 486 146.814 486 143.5 L486 86.5 C486 83.186 488.686 80.5 492 80.5 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 568.5 102.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ConvTranspose 4×4, s2</tspan></text>
+    <text transform="matrix(1 0 0 1 568.5 119.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">128 → 64</tspan></text>
+    <text transform="matrix(1 0 0 1 568.5 136.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">BatchNorm · ReLU</tspan></text>
+    <text transform="matrix(1 0 0 1 571.919 69.48)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">64 × 14 × 14</tspan></text>
+    <path d="M691 89 L844 89 C847.314 89 850 91.686 850 95 L850 135 C850 138.314 847.314 141 844 141 L691 141 C687.686 141 685 138.314 685 135 L685 95 C685 91.686 687.686 89 691 89 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 767.5 111)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ConvTranspose 4×4, s2</tspan></text>
+    <text transform="matrix(1 0 0 1 767.5 128)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">64 → 1 · Tanh</tspan></text>
+    <path d="M890 89 L988 89 C991.314 89 994 91.686 994 95 L994 135 C994 138.314 991.314 141 988 141 L890 141 C886.686 141 884 138.314 884 135 L884 95 C884 91.686 886.686 89 890 89 Z" fill="#fff3c4" stroke="#a68a00" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 939 111)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">fake image x̃</tspan></text>
+    <text transform="matrix(1 0 0 1 939 128)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">in [-1, 1]</tspan></text>
+    <text transform="matrix(1 0 0 1 939 75.23)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">1 × 28 × 28</tspan></text>
+    <path d="M134 115 L166 115" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-1)">
+      <path d="M155.92 109.4 L167.12 115 L155.92 120.6 Z" fill="#444444"/>
+    </g>
+    <path d="M318 115 L350 115" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-2)">
+      <path d="M339.92 109.4 L351.12 115 L339.92 120.6 Z" fill="#444444"/>
+    </g>
+    <path d="M452 115 L484 115" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-3)">
+      <path d="M473.92 109.4 L485.12 115 L473.92 120.6 Z" fill="#444444"/>
+    </g>
+    <path d="M651 115 L683 115" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-4)">
+      <path d="M672.92 109.4 L684.12 115 L672.92 120.6 Z" fill="#444444"/>
+    </g>
+    <path d="M850 115 L882 115" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-5)">
+      <path d="M871.92 109.4 L883.12 115 L871.92 120.6 Z" fill="#444444"/>
+    </g>
+    <path d="M25 336 L113 336 C116.314 336 119 338.686 119 342 L119 382 C119 385.314 116.314 388 113 388 L25 388 C21.686 388 19 385.314 19 382 L19 342 C19 338.686 21.686 336 25 336 Z" fill="#fff3c4" stroke="#a68a00" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 69 358)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">real image x</tspan></text>
+    <text transform="matrix(1 0 0 1 69 375)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">from MNIST</tspan></text>
+    <path d="M36 414 L134 414 C137.314 414 140 416.686 140 420 L140 460 C140 463.314 137.314 466 134 466 L36 466 C32.686 466 30 463.314 30 460 L30 420 C30 416.686 32.686 414 36 414 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 85 436)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">input</tspan></text>
+    <text transform="matrix(1 0 0 1 85 453)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">real or fake</tspan></text>
+    <text transform="matrix(1 0 0 1 85 481)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">1 × 28 × 28</tspan></text>
+    <path d="M180 414 L343 414 C346.314 414 349 416.686 349 420 L349 460 C349 463.314 346.314 466 343 466 L180 466 C176.686 466 174 463.314 174 460 L174 420 C174 416.686 176.686 414 180 414 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 261.5 436)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Conv 4×4, s2</tspan></text>
+    <text transform="matrix(1 0 0 1 261.5 453)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">1 → 64 · LeakyReLU(0.2)</tspan></text>
+    <text transform="matrix(1 0 0 1 261.5 481)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">64 × 14 × 14</tspan></text>
+    <path d="M389 405.5 L552 405.5 C555.314 405.5 558 408.186 558 411.5 L558 468.5 C558 471.814 555.314 474.5 552 474.5 L389 474.5 C385.686 474.5 383 471.814 383 468.5 L383 411.5 C383 408.186 385.686 405.5 389 405.5 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 470.5 427.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Conv 4×4, s2</tspan></text>
+    <text transform="matrix(1 0 0 1 470.5 444.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">64 → 128</tspan></text>
+    <text transform="matrix(1 0 0 1 470.5 461.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">BatchNorm · LeakyReLU</tspan></text>
+    <text transform="matrix(1 0 0 1 470.5 489.5)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">128 × 7 × 7</tspan></text>
+    <path d="M598 414 L726 414 C729.314 414 732 416.686 732 420 L732 460 C732 463.314 729.314 466 726 466 L598 466 C594.686 466 592 463.314 592 460 L592 420 C592 416.686 594.686 414 598 414 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 662 436)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Flatten (6272)</tspan></text>
+    <text transform="matrix(1 0 0 1 662 453)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear → 1</tspan></text>
+    <path d="M772 414 L860 414 C863.314 414 866 416.686 866 420 L866 460 C866 463.314 863.314 466 860 466 L772 466 C768.686 466 766 463.314 766 460 L766 420 C766 416.686 768.686 414 772 414 Z" fill="#f6f6f6" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 816 436)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">logit</tspan></text>
+    <text transform="matrix(1 0 0 1 816 453)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">D(x)</tspan></text>
+    <path d="M906 414 L1044 414 C1047.314 414 1050 416.686 1050 420 L1050 460 C1050 463.314 1047.314 466 1044 466 L906 466 C902.686 466 900 463.314 900 460 L900 420 C900 416.686 902.686 414 906 414 Z" fill="#fbe3e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 975 436)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">BCE loss</tspan></text>
+    <text transform="matrix(1 0 0 1 975 453)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">vs. label 1 or 0</tspan></text>
+    <path d="M140 440 L172 440" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-6)">
+      <path d="M161.92 434.4 L173.12 440 L161.92 445.6 Z" fill="#444444"/>
+    </g>
+    <path d="M349 440 L381 440" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-7)">
+      <path d="M370.92 434.4 L382.12 440 L370.92 445.6 Z" fill="#444444"/>
+    </g>
+    <path d="M558 440 L590 440" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-8)">
+      <path d="M579.92 434.4 L591.12 440 L579.92 445.6 Z" fill="#444444"/>
+    </g>
+    <path d="M732 440 L764 440" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-9)">
+      <path d="M753.92 434.4 L765.12 440 L753.92 445.6 Z" fill="#444444"/>
+    </g>
+    <path d="M866 440 L898 440" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-10)">
+      <path d="M887.92 434.4 L899.12 440 L887.92 445.6 Z" fill="#444444"/>
+    </g>
+    <path d="M51 389 L51 411" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-11)">
+      <path d="M56.6 400.92 L51 412.12 L45.4 400.92 Z" fill="#444444"/>
+    </g>
+    <text transform="matrix(1 0 0 1 57 408)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666"><tspan x="0" y="0">label 1</tspan></text>
+    <path d="M939 142 L939 275 L128 275 L128 411" fill="none" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-12)">
+      <path d="M133.6 400.92 L128 412.12 L122.4 400.92 Z" fill="#444444"/>
+    </g>
+    <text transform="matrix(1 0 0 1 931 232)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="end"><tspan x="0" y="0">label 0</tspan></text>
+    <text transform="matrix(1 0 0 1 931 247)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="end"><tspan x="0" y="0">(fake.detach() in the D step)</tspan></text>
+    <text transform="matrix(1 0 0 1 550 530)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="0" y="0">D is trained to tell real from fake; G is trained so that D calls its fakes real.</tspan></text>
+  </g>
+</svg>
