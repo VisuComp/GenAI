@@ -8,7 +8,7 @@ example outputs of the training progress.
 
 | Folder | Model | Output |
 |---|---|---|
-| [`First_Steps_HPC3/`](First_Steps_HPC3/README.md) | CNN classifier, submitted to HPC3 (MPS GPU share) | log file, `mnist_cnn.pt` |
+| [`01_First_Steps_HPC3/`](01_First_Steps_HPC3/README.md) | CNN classifier, submitted to HPC3 (MPS GPU share) | log file, `mnist_cnn.pt` |
 | [`02_autoregressive/`](02_autoregressive/README.md) | LSTM over the 144 pixels of binarized 12×12 MNIST | `samples.png`, `completions.png` |
 | [`03_gan/`](03_gan/README.md) | DCGAN-style GAN (with architecture diagram) | `samples_epoch_*.png`, `losses.png` |
 | [`04_vae/`](04_vae/README.md) | VAE (with architecture diagram; `--latent-dim 2` → latent-space plots) | `reconstructions.png`, `samples.png`, `latent_space.png` |
@@ -24,6 +24,6 @@ python 03_gan/train.py --epochs 10     # all scripts have --epochs, --batch-size
 
 ## Running on HPC3
 
-Start with [`First_Steps_HPC3/`](First_Steps_HPC3/README.md). To run any other example on the cluster,
-copy `First_Steps_HPC3/job.sh`, change the last line (e.g. `srun python ../05_ddpm/train.py`) and
+Start with [`01_First_Steps_HPC3/`](01_First_Steps_HPC3/README.md). To run any other example on the cluster,
+copy `01_First_Steps_HPC3/job.sh`, change the last line (e.g. `srun python ../05_ddpm/train.py`) and
 raise `--time` if needed (DDPM is the slowest example).

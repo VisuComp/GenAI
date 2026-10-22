@@ -39,7 +39,7 @@ rsync -avz --exclude outputs --exclude data code-examples/ <kennung>@hpc3.hs-fle
 ## 3. One-time setup (on the login node)
 
 ```bash
-cd ~/code-examples/First_Steps_HPC3
+cd ~/code-examples/01_First_Steps_HPC3
 bash setup_env.sh        # creates ~/venvs/genai, installs PyTorch (several GB!), downloads MNIST
 mkdir -p logs            # SLURM does NOT create the log directory; without it the job fails silently
 ```
@@ -72,7 +72,7 @@ host=hpc3-perlman  slurm_job_id=12345  device=cuda
 GPU: NVIDIA RTX PRO 6000 ..., 23.8 GB free of 95.6 GB
 epoch 1/5  loss 0.0312  test acc 0.9811  (4.1s)
 ...
-saved .../First_Steps_HPC3/outputs/mnist_cnn.pt
+saved .../01_First_Steps_HPC3/outputs/mnist_cnn.pt
 ```
 
 Note the two numbers in the GPU line: `total` is the **whole physical card**, `free` is **your share** of the VRAM.
@@ -83,7 +83,7 @@ Note the two numbers in the GPU line: `total` is the **whole physical card**, `f
 From **your own computer**:
 
 ```bash
-rsync -avz <kennung>@hpc3.hs-flensburg.de:~/code-examples/First_Steps_HPC3/outputs/ ./outputs/
+rsync -avz <kennung>@hpc3.hs-flensburg.de:~/code-examples/01_First_Steps_HPC3/outputs/ ./outputs/
 ```
 
 ## Things to try
