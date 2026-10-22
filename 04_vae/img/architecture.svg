@@ -1,7 +1,137 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1290 480" width="1290" height="480" font-family="Helvetica, Arial, sans-serif">
-<defs>
-<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#444"/></marker>
-<marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c0392b"/></marker>
-</defs>
-<rect width="1290" height="480" fill="#fff"/>
-<rect x="10" y="30" width="770" height="290" rx="10" fill="#eef3fb" stroke="#bbb" stroke-dasharray="4 3"/><text x="22" y="52" font-size="15" font-weight="bold" fill="#333" text-anchor="start">Encoder  q(z | x)</text><rect x="790" y="30" width="459" height="290" rx="10" fill="#fdf4ec" stroke="#bbb" stroke-dasharray="4 3"/><text x="802" y="52" font-size="15" font-weight="bold" fill="#333" text-anchor="start">Decoder  p(x | z)</text><rect x="28" y="144.0" width="80" height="52" rx="6" fill="#fff3c4" stroke="#a68a00" stroke-width="1.5"/><text x="68.0" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">x</text><text x="68.0" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">image</text><text x="68.0" y="211.0" font-size="11.5" text-anchor="middle" fill="#666">784</text><rect x="134" y="144.0" width="125" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="196.5" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Linear 784 → 512</text><text x="196.5" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">ReLU</text><rect x="285" y="144.0" width="125" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="347.5" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Linear 512 → 256</text><text x="347.5" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">ReLU</text><line x1="108" y1="170" x2="132" y2="170" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><line x1="259" y1="170" x2="283" y2="170" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><rect x="448" y="79.0" width="140" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="518.0" y="101.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">μ head</text><text x="518.0" y="118.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">Linear 256 → d</text><rect x="448" y="209.0" width="140" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="518.0" y="231.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">log σ² head</text><text x="518.0" y="248.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">Linear 256 → d</text><line x1="410" y1="170" x2="446" y2="105" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><line x1="410" y1="170" x2="446" y2="235" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><rect x="626" y="144.0" width="140" height="52" rx="6" fill="#e3f4e6" stroke="#2e7d32" stroke-width="1.5"/><text x="696.0" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">z = μ + σ ⊙ ε</text><text x="696.0" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">reparameterization</text><line x1="588" y1="105" x2="624" y2="158" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><line x1="588" y1="235" x2="624" y2="182" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><rect x="626" y="334.0" width="140" height="52" rx="6" fill="#e3f4e6" stroke="#2e7d32" stroke-width="1.5"/><text x="696.0" y="356.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">ε ~ N(0, I)</text><text x="696.0" y="373.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">random noise</text><line x1="696.0" y1="334" x2="696.0" y2="197" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><rect x="818" y="144.0" width="125" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="880.5" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Linear d → 256</text><text x="880.5" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">ReLU</text><rect x="969" y="144.0" width="125" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="1031.5" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Linear 256 → 512</text><text x="1031.5" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">ReLU</text><rect x="1120" y="144.0" width="115" height="52" rx="6" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/><text x="1177.5" y="166.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Linear 512 → 784</text><text x="1177.5" y="183.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">(logits)</text><text x="1177.5" y="211.0" font-size="11.5" text-anchor="middle" fill="#666">sigmoid → x̂</text><line x1="943" y1="170" x2="967" y2="170" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><line x1="1094" y1="170" x2="1118" y2="170" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><line x1="767" y1="170" x2="816" y2="170" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/><rect x="433" y="374.0" width="215" height="52" rx="6" fill="#fbe3e0" stroke="#c0392b" stroke-width="1.5"/><text x="540.5" y="396.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">KL term (from μ and log σ²)</text><text x="540.5" y="413.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">−½ Σ(1 + log σ² − μ² − σ²)</text><path d="M518.0 262 V373" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#r)"/><rect x="1087.5" y="374.0" width="180" height="52" rx="6" fill="#fbe3e0" stroke="#c0392b" stroke-width="1.5"/><text x="1177.5" y="396.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Reconstruction term</text><text x="1177.5" y="413.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a">BCE(x̂, x)</text><path d="M1177.5 215 V373" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#r)"/><text x="645" y="468" font-size="12.5" text-anchor="middle" fill="#555">loss = BCE(x̂, x) + KL(q(z|x) ‖ N(0, I));  d = latent dimension (default 2). The encoder outputs a distribution, not a single code.</text></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1290" height="480" viewBox="0 0 1290 480">
+  <defs>
+    <clipPath id="clip-path-1">
+      <path d="M121.92 164.4 L133.12 164.4 L133.12 175.6 L121.92 175.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path d="M272.92 164.4 L284.12 164.4 L284.12 175.6 L272.92 175.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path d="M436.217 111.105 L441.644 101.307 L451.441 106.733 L446.015 116.531 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path d="M446.015 223.469 L451.441 233.267 L441.644 238.693 L436.217 228.895 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path d="M622.969 146.515 L629.262 155.78 L619.997 162.073 L613.704 152.808 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <path d="M613.704 187.192 L619.997 177.927 L629.262 184.22 L622.969 193.485 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <path d="M690.4 207.08 L690.4 195.88 L701.6 195.88 L701.6 207.08 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-8">
+      <path d="M956.92 164.4 L968.12 164.4 L968.12 175.6 L956.92 175.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <path d="M1107.92 164.4 L1119.12 164.4 L1119.12 175.6 L1107.92 175.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-10">
+      <path d="M805.92 164.4 L817.12 164.4 L817.12 175.6 L805.92 175.6 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-11">
+      <path d="M493.6 362.92 L493.6 374.12 L482.4 374.12 L482.4 362.92 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-12">
+      <path d="M1183.1 362.92 L1183.1 374.12 L1171.9 374.12 L1171.9 362.92 Z"/>
+    </clipPath>
+  </defs>
+  <title>architecture.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M20 30 L770 30 C775.523 30 780 34.477 780 40 L780 310 C780 315.523 775.523 320 770 320 L20 320 C14.477 320 10 315.523 10 310 L10 40 C10 34.477 14.477 30 20 30 Z" fill="#eef3fb" stroke="#bbbbbb" stroke-dasharray="4 3"/>
+    <text transform="matrix(1 0 0 1 22 52)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="15" font-weight="bold" fill="#333333"><tspan x="0" y="0">Encoder q(z | x)</tspan></text>
+    <path d="M800 30 L1239 30 C1244.523 30 1249 34.477 1249 40 L1249 310 C1249 315.523 1244.523 320 1239 320 L800 320 C794.477 320 790 315.523 790 310 L790 40 C790 34.477 794.477 30 800 30 Z" fill="#fdf4ec" stroke="#bbbbbb" stroke-dasharray="4 3"/>
+    <text transform="matrix(1 0 0 1 802 52)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="15" font-weight="bold" fill="#333333"><tspan x="0" y="0">Decoder p(x | z)</tspan></text>
+    <path d="M34 144 L102 144 C105.314 144 108 146.686 108 150 L108 190 C108 193.314 105.314 196 102 196 L34 196 C30.686 196 28 193.314 28 190 L28 150 C28 146.686 30.686 144 34 144 Z" fill="#fff3c4" stroke="#a68a00" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 68 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">x</tspan></text>
+    <text transform="matrix(1 0 0 1 68 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">image</tspan></text>
+    <text transform="matrix(1 0 0 1 68 211)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">784</tspan></text>
+    <path d="M140 144 L253 144 C256.314 144 259 146.686 259 150 L259 190 C259 193.314 256.314 196 253 196 L140 196 C136.686 196 134 193.314 134 190 L134 150 C134 146.686 136.686 144 140 144 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 196.5 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 784 → 512</tspan></text>
+    <text transform="matrix(1 0 0 1 196.5 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ReLU</tspan></text>
+    <path d="M291 144 L404 144 C407.314 144 410 146.686 410 150 L410 190 C410 193.314 407.314 196 404 196 L291 196 C287.686 196 285 193.314 285 190 L285 150 C285 146.686 287.686 144 291 144 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 347.5 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 512 → 256</tspan></text>
+    <text transform="matrix(1 0 0 1 347.5 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ReLU</tspan></text>
+    <path d="M108 170 L132 170" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-1)">
+      <path d="M121.92 164.4 L133.12 170 L121.92 175.6 Z" fill="#444444"/>
+    </g>
+    <path d="M259 170 L283 170" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-2)">
+      <path d="M272.92 164.4 L284.12 170 L272.92 175.6 Z" fill="#444444"/>
+    </g>
+    <path d="M454 79 L582 79 C585.314 79 588 81.686 588 85 L588 125 C588 128.314 585.314 131 582 131 L454 131 C450.686 131 448 128.314 448 125 L448 85 C448 81.686 450.686 79 454 79 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 518 101)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">μ head</tspan></text>
+    <text transform="matrix(1 0 0 1 518 118)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 256 → d</tspan></text>
+    <path d="M454 209 L582 209 C585.314 209 588 211.686 588 215 L588 255 C588 258.314 585.314 261 582 261 L454 261 C450.686 261 448 258.314 448 255 L448 215 C448 211.686 450.686 209 454 209 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 518 231)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">log σ² head</tspan></text>
+    <text transform="matrix(1 0 0 1 518 248)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 256 → d</tspan></text>
+    <path d="M410 170 L446 105" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-3)">
+      <path d="M436.217 111.105 L446.543 104.02 L446.015 116.531 Z" fill="#444444"/>
+    </g>
+    <path d="M410 170 L446 235" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-4)">
+      <path d="M446.015 223.469 L446.543 235.98 L436.217 228.895 Z" fill="#444444"/>
+    </g>
+    <path d="M632 144 L760 144 C763.314 144 766 146.686 766 150 L766 190 C766 193.314 763.314 196 760 196 L632 196 C628.686 196 626 193.314 626 190 L626 150 C626 146.686 628.686 144 632 144 Z" fill="#e3f4e6" stroke="#2e7d32" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 696 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">z = μ + σ ⊙ ε</tspan></text>
+    <text transform="matrix(1 0 0 1 696 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">reparameterization</tspan></text>
+    <path d="M588 105 L624 158" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-5)">
+      <path d="M622.969 146.515 L624.629 158.926 L613.704 152.808 Z" fill="#444444"/>
+    </g>
+    <path d="M588 235 L624 182" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-6)">
+      <path d="M613.704 187.192 L624.629 181.074 L622.969 193.485 Z" fill="#444444"/>
+    </g>
+    <path d="M632 334 L760 334 C763.314 334 766 336.686 766 340 L766 380 C766 383.314 763.314 386 760 386 L632 386 C628.686 386 626 383.314 626 380 L626 340 C626 336.686 628.686 334 632 334 Z" fill="#e3f4e6" stroke="#2e7d32" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 696 356)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ε ~ N(0, I)</tspan></text>
+    <text transform="matrix(1 0 0 1 696 373)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">random noise</tspan></text>
+    <path d="M696 334 L696 197" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-7)">
+      <path d="M690.4 207.08 L696 195.88 L701.6 207.08 Z" fill="#444444"/>
+    </g>
+    <path d="M824 144 L937 144 C940.314 144 943 146.686 943 150 L943 190 C943 193.314 940.314 196 937 196 L824 196 C820.686 196 818 193.314 818 190 L818 150 C818 146.686 820.686 144 824 144 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 880.5 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear d → 256</tspan></text>
+    <text transform="matrix(1 0 0 1 880.5 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ReLU</tspan></text>
+    <path d="M975 144 L1088 144 C1091.314 144 1094 146.686 1094 150 L1094 190 C1094 193.314 1091.314 196 1088 196 L975 196 C971.686 196 969 193.314 969 190 L969 150 C969 146.686 971.686 144 975 144 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 1031.5 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 256 → 512</tspan></text>
+    <text transform="matrix(1 0 0 1 1031.5 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">ReLU</tspan></text>
+    <path d="M1126 144 L1229 144 C1232.314 144 1235 146.686 1235 150 L1235 190 C1235 193.314 1232.314 196 1229 196 L1126 196 C1122.686 196 1120 193.314 1120 190 L1120 150 C1120 146.686 1122.686 144 1126 144 Z" fill="#e8f0fb" stroke="#3b5b92" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 1177.5 166)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Linear 512 → 784</tspan></text>
+    <text transform="matrix(1 0 0 1 1177.5 183)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">(logits)</tspan></text>
+    <text transform="matrix(1 0 0 1 1177.5 211)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="11.5" fill="#666666" text-anchor="middle"><tspan x="0" y="0">sigmoid → x̂</tspan></text>
+    <path d="M943 170 L967 170" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-8)">
+      <path d="M956.92 164.4 L968.12 170 L956.92 175.6 Z" fill="#444444"/>
+    </g>
+    <path d="M1094 170 L1118 170" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-9)">
+      <path d="M1107.92 164.4 L1119.12 170 L1107.92 175.6 Z" fill="#444444"/>
+    </g>
+    <path d="M767 170 L816 170" fill="#000000" stroke="#444444" stroke-width="1.6"/>
+    <g clip-path="url(#clip-path-10)">
+      <path d="M805.92 164.4 L817.12 170 L805.92 175.6 Z" fill="#444444"/>
+    </g>
+    <path d="M409 374 L612 374 C615.314 374 618 376.686 618 380 L618 420 C618 423.314 615.314 426 612 426 L409 426 C405.686 426 403 423.314 403 420 L403 380 C403 376.686 405.686 374 409 374 Z" fill="#fbe3e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 510.5 396)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">KL term (from μ and log σ²)</tspan></text>
+    <text transform="matrix(1 0 0 1 510.5 413)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">−½ Σ(1 + log σ² − μ² − σ²)</tspan></text>
+    <path d="M488 262 L488 373" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="6 4"/>
+    <g clip-path="url(#clip-path-11)">
+      <path d="M493.6 362.92 L488 374.12 L482.4 362.92 Z" fill="#c0392b"/>
+    </g>
+    <path d="M1093.5 374 L1261.5 374 C1264.814 374 1267.5 376.686 1267.5 380 L1267.5 420 C1267.5 423.314 1264.814 426 1261.5 426 L1093.5 426 C1090.186 426 1087.5 423.314 1087.5 420 L1087.5 380 C1087.5 376.686 1090.186 374 1093.5 374 Z" fill="#fbe3e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text transform="matrix(1 0 0 1 1177.5 396)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">Reconstruction term</tspan></text>
+    <text transform="matrix(1 0 0 1 1177.5 413)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#1a1a1a" text-anchor="middle"><tspan x="0" y="0">BCE(x̂, x)</tspan></text>
+    <path d="M1177.5 215 L1177.5 373" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="6 4"/>
+    <g clip-path="url(#clip-path-12)">
+      <path d="M1183.1 362.92 L1177.5 374.12 L1171.9 362.92 Z" fill="#c0392b"/>
+    </g>
+    <text transform="matrix(1 0 0 1 645 468)" x="0" y="0" xml:space="preserve" font-family="Helvetica" font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="0" y="0">loss = BCE(x̂, x) + KL(q(z|x) ‖ N(0, I)); d = latent dimension (default 2). The encoder outputs a distribution, not a single code.</tspan></text>
+    <text transform="matrix(1 0 0 1 433 148.044)" x="0" y="0" xml:space="preserve" font-family="&apos;Source Sans 3&apos;" font-size="12" fill="#000000"><tspan x="0" y="0">predicts means</tspan></text>
+    <text transform="matrix(1 0 0 1 325.574 221.375)" x="0" y="0" xml:space="preserve" font-family="&apos;Source Sans 3&apos;" font-size="12" fill="#000000"><tspan x="0" y="0">predicts standard</tspan><tspan x="0" y="14.4">deviations</tspan></text>
+  </g>
+</svg>
