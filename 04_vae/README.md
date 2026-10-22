@@ -15,7 +15,7 @@ Output: `outputs/reconstructions.png`, `outputs/samples.png`, `outputs/latent_sp
 
 ## The idea in formulas
 
-The encoder does not output a code but a **distribution** $q(z\mid x) = \mathcal N(\mu(x), \operatorname{diag}\sigma^2(x))$; the decoder defines
+The encoder does not output a code but a **distribution** $q(z\mid x) = \mathcal N(\mu(x), \mathrm{diag}\sigma^2(x))$; the decoder defines
 $p(x\mid z)$. Training maximizes the evidence lower bound (ELBO), i.e. we **minimize**
 
 $$\mathcal L = \underbrace{-\mathbb E_{z\sim q(z\mid x)}\big[\log p(x\mid z)\big]}_{\text{reconstruction}} \;+\; \underbrace{\mathrm{KL}\big(q(z\mid x)\,\|\,\mathcal N(0,I)\big)}_{\text{regularizer}}$$
