@@ -6,7 +6,7 @@ and fetch the results. Replace `<kennung>` with your Hochschul-Kennung.
 | File | Purpose |
 |---|---|
 | `train.py` | the actual program: small CNN on MNIST; prints node, job id, GPU and VRAM share |
-| `setup_env.sh` | one-time: Python venv in `~/venvs/genai` + MNIST download |
+| `setup_env.sh` | one-time: Python venv in `~/venvs/genai` |
 | `job.sh` | the SLURM batch script (`sbatch job.sh`) |
 
 ## 0. Concepts in 60 seconds
@@ -44,11 +44,11 @@ computer instead: `rsync -avz --exclude outputs --exclude data ./ <kennung>@hpc3
 
 ```bash
 cd ~/GenAI/01_First_Steps_HPC3
-bash setup_env.sh        # creates ~/venvs/genai, installs PyTorch (several GB!), downloads MNIST
+bash setup_env.sh        # creates ~/venvs/genai, installs PyTorch (several GB!)
 mkdir -p logs            # SLURM does NOT create the log directory; without it the job fails silently
 ```
 
-MNIST is downloaded here because the login node has internet access; the job later reads it from your home directory.
+MNIST needs no preparation: `train.py` downloads it automatically on first use (the compute nodes have internet access), into `../data`.
 
 ## 4. Submit the job
 
@@ -149,11 +149,10 @@ srun python train.py --epochs 5
 - `nvidia-smi` is a cheap sanity check at the top of every log: which GPU did I get?
 - `srun` launches the actual program as a job *step* (SLURM then tracks CPU/RAM usage for it in `sacct`).
 
-## `setup_env.sh` and `download_data.py` – one-time preparation
+## `setup_env.sh` – one-time preparation
 
-`setup_env.sh` creates a virtual environment in `~/venvs/genai`, installs the packages of `../requirements.txt` and calls
-`download_data.py`, which fetches MNIST into `../data`. Both run on the **login node** (internet access, short-running).
-The compute nodes only read the files.
+`setup_env.sh` creates a virtual environment in `~/venvs/genai` and installs the packages of `../requirements.txt`.
+It runs once on the **login node**; every job then just activates this environment.
 
 ## `train.py` – the program
 
@@ -193,7 +192,7 @@ train_loader = DataLoader(train_set, args.batch_size, shuffle=True, num_workers=
 
 - `ToTensor` converts the 28×28 image to a float tensor in [0, 1]; `Normalize(0.1307, 0.3081)` subtracts the mean and divides
   by the standard deviation of MNIST pixels – networks train faster on standardized inputs.
-- `download=True` does nothing if the files are already there (they are, after `setup_env.sh`).
+- `download=True` fetches MNIST into `../data` on the first run and does nothing afterwards (the data directory is shared by all jobs, as it lives in your home directory).
 - `DataLoader` batches and shuffles; `num_workers` loads batches in parallel processes. On the cluster we use as
   many workers as CPUs requested with `--cpus-per-task`; on your laptop 0 (everything in the main process).
 
