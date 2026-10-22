@@ -74,8 +74,11 @@ The log should look like this:
 ```
 host=hpc3-perlman  slurm_job_id=7359  device=cuda
 GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 93.5 GB free of 95.1 GB
-epoch 1/5  loss ...  test acc ...  (...s)
-...
+epoch 1/5  loss 0.0393  test acc 0.9765  (8.9s)
+epoch 2/5  loss 0.0662  test acc 0.9838  (1.4s)
+epoch 3/5  loss 0.1473  test acc 0.9871  (1.4s)
+epoch 4/5  loss 0.0680  test acc 0.9854  (1.4s)
+epoch 5/5  loss 0.0072  test acc 0.9876  (1.4s)
 saved .../01_First_Steps_HPC3/outputs/mnist_cnn.pt
 ```
 
@@ -246,16 +249,19 @@ file stays empty for a long time.
 
 ## Exemplary output
 
-A run on a laptop (Apple GPU, `device=mps`; on HPC3 you will see `device=cuda` and the GPU line):
+A run on HPC3 (MPS share on `hpc3-perlman`, `device=cuda`):
 
 ```
-host=MacBook-Pro-von-Marc-2.local  slurm_job_id=-  device=mps
-epoch 1/5  loss 0.0668  test acc 0.9776  (5.3s)
-epoch 2/5  loss 0.1946  test acc 0.9821  (4.7s)
-epoch 3/5  loss 0.0572  test acc 0.9858  (4.5s)
-epoch 4/5  loss 0.0180  test acc 0.9850  (4.6s)
-epoch 5/5  loss 0.0074  test acc 0.9873  (4.9s)
+host=hpc3-perlman  slurm_job_id=7359  device=cuda
+GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 93.5 GB free of 95.1 GB
+epoch 1/5  loss 0.0393  test acc 0.9765  (8.9s)
+epoch 2/5  loss 0.0662  test acc 0.9838  (1.4s)
+epoch 3/5  loss 0.1473  test acc 0.9871  (1.4s)
+epoch 4/5  loss 0.0680  test acc 0.9854  (1.4s)
+epoch 5/5  loss 0.0072  test acc 0.9876  (1.4s)
 ```
 
-`loss` is the loss of the *last mini-batch* of the epoch (hence the bump in epoch 2); the **test accuracy** is the number
-to watch: ~98 % after the first epoch, ~99 % after five.
+`loss` is the loss of the *last mini-batch* of the epoch (hence the jitter); the **test accuracy** is the number to watch:
+~98 % after the first epoch, ~99 % after five. The first epoch is much slower (8.9 s vs. 1.4 s), most likely because it includes
+one-off start-up work (CUDA initialization, starting the data-loader workers, first-use kernel setup).
+For comparison, the same script on a laptop with an Apple GPU (`device=mps`) needs about 4.5–5 s per epoch and reaches the same accuracy.
