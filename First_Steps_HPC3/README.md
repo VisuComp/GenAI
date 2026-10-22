@@ -88,7 +88,7 @@ rsync -avz <kennung>@hpc3.hs-flensburg.de:~/code-examples/First_Steps_HPC3/outpu
 
 ## Things to try
 
-1. Change `--gres=shard:1` to `--gres=gpu:mig_24gb:1` and compare epoch times in the log.
+1. Change `--gres=shard:1` to `--gres=gpu:mig_48gb:1` and compare epoch times in the log.
 2. Request too little time (`--time=00:00:30`) and look at the final job state in `sacct`.
 3. Submit the same job three times at once and watch `squeue --me` – do they share the GPU?
 4. Run an interactive shell on a compute node: `srun --partition=interactive --gres=shard:1 --pty bash`.
