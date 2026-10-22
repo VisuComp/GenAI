@@ -72,15 +72,20 @@ scancel 12345                        # cancel the job
 The log should look like this:
 
 ```
-host=hpc3-perlman  slurm_job_id=12345  device=cuda
-GPU: NVIDIA RTX PRO 6000 ..., 23.8 GB free of 95.6 GB
-epoch 1/5  loss 0.0312  test acc 0.9811  (4.1s)
+host=hpc3-perlman  slurm_job_id=7359  device=cuda
+GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 93.5 GB free of 95.1 GB
+epoch 1/5  loss ...  test acc ...  (...s)
 ...
 saved .../01_First_Steps_HPC3/outputs/mnist_cnn.pt
 ```
 
-Note the two numbers in the GPU line: `total` is the **whole physical card**, `free` is **your share** of the VRAM.
-`nvidia-smi` (also at the top of the log) always shows the whole card.
+Note the two numbers in the GPU line: `total` is the **whole physical card**, `free` is the memory that is still free on it
+right now. `nvidia-smi` (also at the top of the log) always shows the whole card, plus one `nvidia-cuda-mps-server` process
+per job that currently uses the shared GPU.
+
+The cluster FAQ says that on an MPS share the free memory of a fresh job equals the share of your job (a fraction of the card).
+In the run above it reported almost the whole card (93.5 of 95.1 GB), so do not assume that a limit is visible or enforced:
+keep your memory use modest anyway, the GPU is shared with other people.
 
 ## 6. Fetch the results
 
@@ -103,7 +108,7 @@ rsync -avz <kennung>@hpc3.hs-flensburg.de:~/GenAI/01_First_Steps_HPC3/outputs/ .
 |---|---|
 | Job ends immediately, no log file | `logs/` directory did not exist when you submitted |
 | `ModuleNotFoundError: torch` in the log | venv not activated in `job.sh`, or `setup_env.sh` not run |
-| `CUDA out of memory` although `nvidia-smi` shows free memory | you exceeded your MPS VRAM share, see `free` in the log |
+| `CUDA out of memory` although `nvidia-smi` shows free memory | you may have exceeded your MPS VRAM share; compare with the `free` value in the log |
 | Job stays `PD` | nodes/shares busy; `scontrol show job <id>` shows the reason |
 | Quota exceeded | PyTorch venvs are large – delete unused ones, check the "Speicher" page in the portal |
 
@@ -162,6 +167,11 @@ It runs once on the **login node**; every job then just activates this environme
 p.add_argument("--epochs", type=int, default=5) ...
 ```
 
+All of this lives inside a function `main()` that is called under `if __name__ == "__main__":`. This is **required** as soon as
+the `DataLoader` uses worker processes (as it does in the cluster job): recent Python versions start the workers by importing
+`train.py` again, and without the guard each worker would start its own training run and crash with
+*"An attempt has been made to start a new process before the current process has finished its bootstrapping phase"*.
+
 Hyperparameters are command-line flags, so `job.sh` can change them without editing the code
 (`srun python train.py --epochs 20`).
 
@@ -177,9 +187,9 @@ if device.type == "cuda":
 The program picks the best available device, so the very same file runs on a laptop and on the cluster, and prints
 where it runs. `SLURM_JOB_ID` is an environment variable set by SLURM inside a job (`-` on your laptop).
 
-`torch.cuda.mem_get_info()` is the way to see **your VRAM share** on an MPS-shared GPU: `total` is the whole card,
-`free` (before you allocate anything) is what you may use. `torch.cuda.get_device_properties(0).total_memory` and
-`nvidia-smi` would both show the full card.
+`torch.cuda.mem_get_info()` returns `(free, total)` in bytes: `total` is the whole card, `free` what is unused right now.
+On an MPS-shared GPU the FAQ describes it as the way to see the VRAM share of your job (see the note in step 5 for what we
+observed). `torch.cuda.get_device_properties(0).total_memory` and `nvidia-smi` always show the full card.
 
 ### Block 3 – Data
 
