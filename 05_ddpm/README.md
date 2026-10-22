@@ -68,6 +68,8 @@ Transformer). Nearby $t$ get similar vectors, and a small MLP (`self.temb`) can 
 
 ### Block 4 – The U-Net
 
+![Architecture of the U-Net](img/architecture.svg)
+
 ```python
 class ResBlock(nn.Module):
     def forward(self, x, temb):
